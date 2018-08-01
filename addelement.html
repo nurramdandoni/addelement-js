@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Textfield Dinamis – nurramdandoni.github.io</title>
+    <script type="text/javascript">
+        counter=0;
+        function action(){
+            counterNext=counter+1;
+            document.getElementById("input"+counter).innerHTML = "<p>Masukkan Data <input name=’data[]’ type=’text’ /></p> <div id=\"input"+counterNext+"\"></div>";// perhatikan tanda petiknya, sama seperti pemrograman java yang lainnya
+            counter++;
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Form Dinamis</h1>
+    <form action="proses_dinamis.php" method="post">
+        <p>Masukkan Data <input name="data[]" type="text" /></p>
+        <div id="input0"></div>
+        <!-- <p><a href="javascript:action();">Tambah</a></p> -->
+        <div onclick="javascript:action();">Tambah</div>
+    </form>
+  </body>
+</html>
